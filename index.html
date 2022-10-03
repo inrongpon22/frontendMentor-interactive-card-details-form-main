@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="left-box">
+        <div class="front-card">
+          <div class="front-content">
+            <div class="title">
+              <img src="./images/card-logo.svg" alt="" />
+            </div>
+            <p class="card-number" id="card-holder-number">0000 0000 0000 0000</p>
+            <div class="front-card-footer">
+              <p class="card-name" id="card-holder-name">Jane Appleseed</p>
+              <div class="card-date">
+                <p class="date-mm">00</p>
+                <p class="date-devide">/</p>
+                <p class="date-yy">00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="CVC">000</div>
+        </div>
+      </div>
+      <div class="right-box" id="right-box">
+        <div class="card-name-input">
+          <p>CARDHOLDER NAME</p>
+          <input type="text" placeholder="Jane Appleseed" id="input-name" class="" oninput="inputName()" />
+          <p id="errorMsg"></p>
+        </div>
+        <div class="card-no-input">
+          <p>Card Number</p>
+          <input type="text" placeholder="1234 5678 9123 0000" id="input-number" oninput="inputCardNum()" />
+          <p id="card-num-error"></p>
+        </div>
+        <div style="display: flex">
+          <div class="card-date-input">
+            <p>Exp. Date (MM/YY)</p>
+            <div style="display: flex">
+              <input type="text" placeholder="MM" id="expiry" oninput="inputMM()" />
+              <input type="text" placeholder="YY" id="expiry" oninput="inputYY()" />
+            </div>
+            <p id="expiry-error"></p>
+          </div>
+          <div class="card-cvc-input">
+            <p>CVC</p>
+            <input type="text" placeholder="123" id="input-cvc" oninput="inputCvc()" />
+            <p id="error-cvc"></p>
+          </div>
+        </div>
+        <button class="confirm-btn" id="confirm-btn">Confirm</button>
+      </div>
+      <!-- Completed state start -->
+      <div class="completed-box hidden" id="completed-box">
+        <div class="completed-content">
+          <img src="./images/icon-complete.svg" alt="" />
+          <h2>Thank you!</h2>
+          <p>We've added your card details</p>
+          <button class="continue-btn" id="continue-btn">Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
